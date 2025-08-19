@@ -1,0 +1,103 @@
+<body>
+
+<header>
+  <div class="logo">तिकट मसाले</div>
+  <div class="tagline">शुद्ध, जुन्या पद्धतीची महाराष्ट्रीयन मसाले</div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">आमच्याबद्दल</a></li>
+    <li><a href="#products">उत्पादने</a></li>
+    <li><a href="#order">ऑर्डर करा</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <section id="about" class="section about">
+    <h2>आमची गोष्ट</h2>
+    <p>तिकट मसाले हे आमच्या आज्जी-पणज्जींच्या जुन्या, शुद्ध पद्धतीने तयार केले जातात...</p>
+  </section>
+
+  <section id="products" class="section">
+    <h2>आमची उत्पादने</h2>
+    <div class="products">
+      <div class="product-card">
+        <div class="product-img"><img src="images/garam.jpg" alt="गरम मसाला"></div>
+        <div class="product-info">
+          <h3>गरम मसाला</h3>
+          <p>चव आणि सुगंधाने भरलेला.</p>
+          <span class="price">₹699 / किलो</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="images/goda.jpg" alt="गोडा मसाला"></div>
+        <div class="product-info">
+          <h3>गोडा मसाला</h3>
+          <p>मिसळ, पोहे, सांबार साठी परफेक्ट.</p>
+          <span class="price">₹699 / किलो</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="images/kadhi.jpg" alt="कढी मसाला"></div>
+        <div class="product-info">
+          <h3>कढी मसाला</h3>
+          <p>घरगुती पद्धतीने दळलेला.</p>
+          <span class="price">₹699 / किलो</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"><img src="images/sambar.jpg" alt="सांबार मसाला"></div>
+        <div class="product-info">
+          <h3>सांबार मसाला</h3>
+          <p>दक्षिण भारतीय स्वाद.</p>
+          <span class="price">₹699 / किलो</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="section">
+    <div class="cta-box">
+      <h2>आजच ऑर्डर करा!</h2>
+      <p>खालील फॉर्म भरून WhatsApp वर थेट ऑर्डर पाठवा.</p>
+    </div>
+
+    <form class="order-form" onsubmit="sendOrder(); return false;">
+      <input type="text" id="name" placeholder="तुमचे नाव" required="">
+      <input type="tel" id="mobile" placeholder="मोबाईल नंबर" required="">
+      <textarea id="address" rows="3" placeholder="पत्ता" required=""></textarea>
+      <select id="product" required="">
+        <option value="">उत्पादन निवडा</option>
+        <option>काळा मसाला - ₹699</option>
+        <option>लाल  मसाला - ₹699</option>
+        <option>गावरान मसाला - ₹699</option>
+        <option>सांबार मसाला - ₹699</option>
+      </select>
+      <input type="number" id="quantity" placeholder="प्रमाण (किलो)" required="">
+      <button type="submit">WhatsApp वर पाठवा</button>
+    </form>
+  </section>
+</div>
+
+<footer>
+  <p><strong>संपर्क:</strong> <a href="tel:+918788334863">+91 8788334863</a></p>
+  <p>© 2025 Tikjat Masale. सर्व हक्क राखीव.</p>
+</footer>
+
+<script>
+  function sendOrder() {
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let address = document.getElementById("address").value;
+    let product = document.getElementById("product").value;
+    let qty = document.getElementById("quantity").value;
+
+    let msg = नाव: ${name}%0Aमोबाईल: ${mobile}%0Aपत्ता: ${address}%0Aउत्पादन: ${product}%0Aप्रमाण: ${qty} किलो;
+
+    window.open(https://wa.me/918788334863?text=${msg}, "_blank");
+  }
+</script>
+
+
+</body>
