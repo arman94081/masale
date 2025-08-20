@@ -187,9 +187,9 @@
     <h2>आमची उत्पादने</h2>
     <div class="products">
       <div class="product-card">
-        <div class="product-img"><img src="images/garam.jpg" alt="गरम मसाला"></div>
+        <div class="product-img"><img src="images/garam.jpg" alt="काळा मसाला"></div>
         <div class="product-info">
-          <h3>गरम मसाला</h3>
+          <h3>काळा मसाला</h3>
           <p>चव आणि सुगंधाने भरलेला.</p>
           <span class="price">₹699 / किलो</span>
         </div>
@@ -205,7 +205,7 @@
       <div class="product-card">
         <div class="product-img"><img src="images/kadhi.jpg" alt="कढी मसाला"></div>
         <div class="product-info">
-          <h3>कढी मसाला</h3>
+          <h3>लाल  मसाला</h3>
           <p>घरगुती पद्धतीने दळलेला.</p>
           <span class="price">₹699 / किलो</span>
         </div>
@@ -233,8 +233,8 @@
       <textarea id="address" rows="3" placeholder="पत्ता" required=""></textarea>
       <select id="product" required="">
         <option value="">उत्पादन निवडा</option>
-        <option>गरम मसाला - ₹699</option>
-        <option>गोडा मसाला - ₹699</option>
+        <option>काला  मसाला - ₹699</option>
+        <option>लाल  मसाला - ₹699</option>
         <option>कढी मसाला - ₹699</option>
         <option>सांबार मसाला - ₹699</option>
       </select>
@@ -246,7 +246,7 @@
 
 <footer>
   <p><strong>संपर्क:</strong> <a href="tel:+918788334863">+91 8788334863</a></p>
-  <p>© 2025 Tikjat Masale. सर्व हक्क राखीव.</p>
+  <p>© 2025 jamkhed Masale. सर्व हक्क राखीव.</p>
 </footer>
 
 <script>
@@ -258,6 +258,16 @@
     let qty = document.getElementById("quantity").value;
 
     let msg = नाव: ${name}%0Aमोबाईल: ${mobile}%0Aपत्ता: ${address}%0Aउत्पादन: ${product}%0Aप्रमाण: ${qty} किलो;
+    let phone = "+918788334863";
+    let message = `नमस्कार, मला Order करायचं आहे:
+नाव: ${name}
+प्रॉडक्ट: ${product}
+Quantity: ${quantity}`;
+
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank"); // WhatsApp उघडेल
+});
+</script>
 
     window.open(https://wa.me/918788334863?text=${msg}, "_blank");
   }
@@ -265,3 +275,4 @@
 
 
 </body></html>
+
