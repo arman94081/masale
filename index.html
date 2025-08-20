@@ -1,171 +1,42 @@
-<html lang="mr"><head>
+<html lang="mr">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Maharashtrian Masale</title>
+  <title>Maharashtrian Masale</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      background-color: #fff8f0;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(to right, #e74c3c, #f39c12);
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .tagline {
-      font-size: 1.2rem;
-      opacity: 0.95;
-    }
-    nav {
-      background-color: #fff3e0;
-      padding: 1rem 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #d35400;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    nav ul li a:hover {
-      background-color: #e67e22;
-      color: white;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    .section {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-    h2 {
-      color: #e74c3c;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      border-bottom: 2px solid #f39c12;
-      padding-bottom: 0.5rem;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-    .product-card {
-      background: #fffdf9;
-      border: 1px solid #f2d7d5;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    .product-img img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background-color: #fff8f0; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(to right, #e74c3c, #f39c12); color: white; padding: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+    .logo { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; }
+    .tagline { font-size: 1.2rem; opacity: 0.95; }
+    nav { background-color: #fff3e0; padding: 1rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    nav ul { display: flex; justify-content: center; list-style: none; }
+    nav ul li a { text-decoration: none; color: #d35400; font-weight: 600; padding: 0.5rem 1rem; margin: 0 0.5rem; border-radius: 4px; transition: all 0.3s ease; }
+    nav ul li a:hover { background-color: #e67e22; color: white; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+    .section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); }
+    h2 { color: #e74c3c; margin-bottom: 1.5rem; text-align: center; border-bottom: 2px solid #f39c12; padding-bottom: 0.5rem; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+    .product-card { background: #fffdf9; border: 1px solid #f2d7d5; border-radius: 10px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); }
+    .product-img img { width: 100%; height: 200px; object-fit: cover; }
     .product-info { padding: 1.5rem; }
     .product-info h3 { color: #d35400; margin-bottom: 0.5rem; }
-    .price {
-      color: #e74c3c;
-      font-weight: bold;
-      font-size: 1.2rem;
-      display: block;
-      margin: 0.5rem 0;
-    }
-    .cta-box {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: linear-gradient(rgba(243, 156, 18, 0.9), rgba(231, 76, 60, 0.9));
-      color: white;
-      border-radius: 12px;
-    }
+    .price { color: #e74c3c; font-weight: bold; font-size: 1.2rem; display: block; margin: 0.5rem 0; }
+    .cta-box { text-align: center; padding: 3rem 2rem; background: linear-gradient(rgba(243, 156, 18, 0.9), rgba(231, 76, 60, 0.9)); color: white; border-radius: 12px; }
     .cta-box h2 { color: white; border-bottom: none; }
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-    }
-    .whatsapp-btn:hover {
-      background-color: #128C7E;
-      transform: scale(1.05);
-    }
-    .order-form {
-      max-width: 600px;
-      margin: auto;
-      background: #fff8f0;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    .order-form input, .order-form select, .order-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin: 0.6rem 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .order-form button {
-      background-color: #e74c3c;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .order-form button:hover { background-color: #c0392b; }
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 0;
-    }
+    .order-form { max-width: 600px; margin: auto; background: #fff8f0; padding: 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    .order-form input, .order-form select, .order-form textarea { width: 100%; padding: 0.8rem; margin: 0.6rem 0; border: 1px solid #ccc; border-radius: 8px; }
+    .order-form button { background-color: #25D366; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+    .order-form button:hover { background-color: #128C7E; }
+    footer { background-color: #333; color: #fff; text-align: center; padding: 2rem 0; }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">तिकट मसाले</div>
+  <div class="logo"> जामखेड मसाले</div>
   <div class="tagline">शुद्ध, जुन्या पद्धतीची महाराष्ट्रीयन मसाले</div>
 </header>
 
@@ -198,7 +69,7 @@
         <div class="product-img"><img src="https://i.ytimg.com/vi/UVtCksqTYnY/sddefault.jpg" alt="गोडा मसाला"></div>
         <div class="product-info">
           <h3>गोडा मसाला</h3>
-          <p>मिसळ, पोहे, सांबार साठी परफेक्ट.</p>
+          <p>मिसळ, सांबार साठी परफेक्ट.</p>
           <span class="price">₹599 / किलो</span>
         </div>
       </div>
@@ -211,7 +82,7 @@
         </div>
       </div>
       <div class="product-card">
-          <div class="product-img"><img src="https://lh3.googleusercontent.com/p/AF1QipMtgb47Xav5iUYQ3EyNLUCFA8T0UtxR76l9MInL=s680-w680-h510-rw" alt="गावरान मसाला"></div>
+        <div class="product-img"><img src="https://lh3.googleusercontent.com/p/AF1QipMtgb47Xav5iUYQ3EyNLUCFA8T0UtxR76l9MInL=s680-w680-h510-rw" alt="गावरान मसाला"></div>
         <div class="product-info">
           <h3>गावरान मसाला</h3>
           <p>दक्षिण भारतीय स्वाद.</p>
@@ -228,17 +99,17 @@
     </div>
 
     <form class="order-form" onsubmit="sendOrder(); return false;">
-      <input type="text" id="name" placeholder="तुमचे नाव" required="">
-      <input type="tel" id="mobile" placeholder="मोबाईल नंबर" required="">
-      <textarea id="address" rows="3" placeholder="पत्ता" required=""></textarea>
-      <select id="product" required="">
+      <input type="text" id="name" placeholder="तुमचे नाव" required>
+      <input type="tel" id="mobile" placeholder="मोबाईल नंबर" required>
+      <textarea id="address" rows="3" placeholder="पत्ता" required></textarea>
+      <select id="product" required>
         <option value="">उत्पादन निवडा</option>
-        <option>काला  मसाला - ₹699</option>
+        <option>काळा मसाला - ₹699</option>
         <option>लाल चटणी - ₹399</option>
-        <option>गोडा मसाला< - ₹599</option>
+        <option>गोडा मसाला - ₹599</option>
         <option>सांबार मसाला - ₹699</option>
       </select>
-      <input type="number" id="quantity" placeholder="प्रमाण (किलो)" required="">
+      <input type="number" id="quantity" placeholder="प्रमाण (किलो)" required>
       <button type="submit">WhatsApp वर पाठवा</button>
     </form>
   </section>
@@ -257,25 +128,13 @@
     let product = document.getElementById("product").value;
     let qty = document.getElementById("quantity").value;
 
-    let msg = नाव: ${name}%0Aमोबाईल: ${mobile}%0Aपत्ता: ${address}%0Aउत्पादन: ${product}%0Aप्रमाण: ${qty} किलो;
-    let phone = "+918788334863";
-    let message = `नमस्कार, मला Order करायचं आहे:
-नाव: ${name}
-प्रॉडक्ट: ${product}
-Quantity: ${quantity}`;
+    let message = `नमस्कार, मला Order करायचं आहे:%0A👤 नाव: ${name}%0A📱 मोबाईल: ${mobile}%0A🏠 पत्ता: ${address}%0A🛒 उत्पादन: ${product}%0A📦 प्रमाण: ${qty} किलो`;
 
-    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank"); // WhatsApp उघडेल
-});
-</script>
-
-    window.open(https://wa.me/918788334863?text=${msg}, "_blank");
+    let phone = "918788334863"; // +91 सोडून फक्त नंबर
+    let url = `https://wa.me/${phone}?text=${message}`;
+    window.open(url, "_blank");
   }
 </script>
 
-
-</body></html>
-
-
-
-
+</body>
+</html>
